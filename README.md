@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# json 파일 생성기
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+=============
 
-## Available Scripts
+- 목적 : 편리하게 json 데이터를 조작하기 위해서
+- 기능 :
 
-In the project directory, you can run:
+### 새로운 기능 설명 추가하기 버튼을 누르면
 
-### `npm start`
+> 1. 카테고리 선택
+> 2. functionName 선택 / 추가 가능하게
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- > 3. app 선택 / 추가 가능하게 -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> 3. charateristic 작성
 
-### `npm test`
+### 새로운 설명 method 추가하기 버튼을 누르면
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> 1. 카테고리 선택
+> 2. functionName 선택 / 추가 가능하게
+> 3. method app 선택 / 추가 가능하게 (여기서 작성된 app name들이 기능을 제공하는 앱 배열에 자동 등록됨)
+> 4. methodNum 선택
+> 5. method content 작성
+>    > - 여러개의 input box를 만들어서 잘 구분해서 작성할 수 있도록 하기
 
-### `npm run build`
+- 요구 조건
+  > 1. name
+  > 2. app : array
+  > 3. charateristic
+  > 4. method
+  >    > 1. methodAppName
+  >    > 2. methodNum
+  >    > 3. methodTitle
+  >    > 4. methodContent
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+ {
+    "category": "",
+    "objects": [
+      {
+        "name": "",
+        "app": [""],
+        "charateristic": "",
+        "method": [
+          {
+            "methodAppName": "",
+            "howto": [
+              {
+                "methodNum": 1,
+                "methodTitle": "",
+                "methodContent": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+```
