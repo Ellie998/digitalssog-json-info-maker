@@ -9,9 +9,27 @@ export const DataContext = createContext({
   date: "",
   category: "",
   characteristic: "",
+  functionName: "",
+  methodName: "",
+  appList: [],
+  //
   setDate: null,
+  setFunctionName: null,
+  setMethodName: null,
+  setAppList: null,
   setCategory: null,
   setCharacteristic: null,
+  //
+  methodAppName: "",
+  methodNum: null,
+  methodTitle: "",
+  methodContents: [],
+  //
+  setMethodAppName: null,
+  setMethodNum: null,
+  setMethodTitle: null,
+  setMethodContents: null,
+  //
   isSubmitClicked: false,
   isResetClicked: false,
 });
@@ -35,6 +53,36 @@ const MakerBox = () => {
   const [date, setDate] = useState("");
   const [category, setCategory] = useState("");
   const [characteristic, setCharacteristic] = useState("");
+  const [functionName, setFunctionName] = useState("");
+  const [methodName, setMethodName] = useState("");
+  const [appList, setAppList] = useState([]);
+
+  const [methodAppName, setMethodAppName] = useState("");
+  const [methodNum, setMethodNum] = useState(null);
+  const [methodTitle, setMethodTitle] = useState("");
+  const [methodContents, setMethodContents] = useState([]);
+
+  const onResetClickHandler = () => {
+    setIsSubmitClicked(false);
+    setIsResetClicked(true);
+    resetContents();
+    setTimeout(() => {
+      setIsResetClicked(false);
+    }, 1000);
+  };
+
+  const resetContents = () => {
+    setDate("");
+    setCategory("");
+    setCharacteristic("");
+    setFunctionName("");
+    setMethodName("");
+    setAppList([]);
+    setMethodAppName("");
+    setMethodNum(null);
+    setMethodTitle("");
+    setMethodContents([]);
+  };
 
   return (
     <Container id="maker_wrap">
@@ -43,17 +91,35 @@ const MakerBox = () => {
           date,
           category,
           characteristic,
+          functionName,
+          methodName,
+          appList,
           setDate: (e) => setDate(e.target.value),
           setCategory: (e) => setCategory(e.target.value),
           setCharacteristic: (e) => setCharacteristic(e.target.value),
+          setFunctionName: (e) => setFunctionName(e.target.value),
+          setMethodName: (e) => setMethodName(e.target.value),
+          setAppList: setAppList,
           isSubmitClicked,
           isResetClicked,
+          //
+          methodAppName,
+          methodNum,
+          methodTitle,
+          methodContents,
+          //
+          setMethodAppName: (e) => setMethodAppName(e.target.value),
+          setMethodNum: (e) => setMethodNum(e.target.value),
+          setMethodTitle: (e) => setMethodTitle(e.target.value),
+          setMethodContents,
         }}>
         <ContentsContainer>
           <Button
             onClick={() => {
               setIsBtn1Clicked(true);
               setIsBtn2Clicked(false);
+              resetContents();
+              setIsSubmitClicked(false);
             }}>
             new 기능
           </Button>
@@ -61,6 +127,8 @@ const MakerBox = () => {
             onClick={() => {
               setIsBtn1Clicked(false);
               setIsBtn2Clicked(true);
+              resetContents();
+              setIsSubmitClicked(false);
             }}>
             new method
           </Button>
@@ -76,18 +144,7 @@ const MakerBox = () => {
           </Button>
         )}
         {(isBtn1Clicked || isBtn2Clicked) && (
-          <Button
-            className={`align-center`}
-            onClick={() => {
-              setIsSubmitClicked(false);
-              setIsResetClicked(true);
-              setDate("");
-              setCategory("");
-              setCharacteristic("");
-              setTimeout(() => {
-                setIsResetClicked(false);
-              }, 1000);
-            }}>
+          <Button className={`align-center`} onClick={onResetClickHandler}>
             리셋
           </Button>
         )}

@@ -7,13 +7,39 @@ const Container = styled.textarea`
   height: 300px;
 `;
 
-const ResultBox = () => {
-  const { date, category, characteristic, isSubmitClicked } =
-    useContext(DataContext);
+const ResultBox = ({ result_function }) => {
+  const {
+    date,
+    functionName,
+    appList,
+    characteristic,
+    isSubmitClicked,
+    methodAppName,
+    methodNum,
+    methodTitle,
+    methodContents,
+  } = useContext(DataContext);
 
-  const result = `"date": "${date}", 
-"category": "${category}", 
-"characteristic": "${characteristic}"
+  const result = result_function
+    ? `
+"date": "${date}", 
+"name": "${functionName}", 
+"app":${appList},
+"characteristic": "${characteristic}",
+`
+    : `{
+"date": "${date}", 
+"methodAppName": "${methodAppName}",
+"howto": [
+  {
+    "methodNum": ${methodNum},
+    "methodTitle": "${methodTitle}",
+    "methodContent": [${methodContents
+      .filter((item) => item !== undefined && item !== "")
+      .map((item) => `"${item}"`)}]
+  }
+]
+}
 `;
 
   return <Container defaultValue={isSubmitClicked ? result : ""}></Container>;
