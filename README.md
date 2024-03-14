@@ -1,9 +1,9 @@
 # json 파일 생성기
 =============
-https://digitalssog-data-maker.netlify.app
 
 - 목적 : 편리하게 json 데이터를 조작하기 위해서
 - 기능 :
+- url : https://digitalssog-data-maker.netlify.app
 
 ### 새로운 기능 설명 추가하기 버튼을 누르면
 
