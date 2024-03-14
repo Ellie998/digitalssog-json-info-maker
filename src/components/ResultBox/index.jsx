@@ -24,14 +24,14 @@ const ResultBox = ({ result_function }) => {
     ? `
 "date": "${date}", 
 "name": "${functionName}", 
-"app":${appList},
+"app": ["${appList}"],
 "characteristic": "${characteristic}",
 `
     : `{
-"date": "${date}", 
 "methodAppName": "${methodAppName}",
 "howto": [
   {
+    "date": "${date}", 
     "methodNum": ${methodNum},
     "methodTitle": "${methodTitle}",
     "methodContent": [${methodContents

@@ -88,6 +88,9 @@ const NewMethodDataBox = () => {
                 methodContents[4],
                 methodContents[5],
                 methodContents[6],
+                methodContents[7],
+                methodContents[8],
+                methodContents[9],
               ]);
             }}
             value={methodContents[1]}
@@ -105,6 +108,9 @@ const NewMethodDataBox = () => {
                 methodContents[4],
                 methodContents[5],
                 methodContents[6],
+                methodContents[7],
+                methodContents[8],
+                methodContents[9],
               ]);
             }}
             value={methodContents[2]}
@@ -122,6 +128,9 @@ const NewMethodDataBox = () => {
                 methodContents[4],
                 methodContents[5],
                 methodContents[6],
+                methodContents[7],
+                methodContents[8],
+                methodContents[9],
               ]);
             }}
             value={methodContents[3]}
@@ -139,6 +148,9 @@ const NewMethodDataBox = () => {
                 `${e.target.value}`,
                 methodContents[5],
                 methodContents[6],
+                methodContents[7],
+                methodContents[8],
+                methodContents[9],
               ]);
             }}
             value={methodContents[4]}
@@ -156,6 +168,9 @@ const NewMethodDataBox = () => {
                 methodContents[4],
                 e.target.value,
                 methodContents[6],
+                methodContents[7],
+                methodContents[8],
+                methodContents[9],
               ]);
             }}
             value={methodContents[5]}
@@ -173,10 +188,73 @@ const NewMethodDataBox = () => {
                 methodContents[4],
                 methodContents[5],
                 `${e.target.value}`,
+                methodContents[7],
+                methodContents[8],
+                methodContents[9],
               ]);
             }}
             value={methodContents[6]}
             label={"methodContents7"}
+          />
+        </Li>
+        <Li>
+          <InputText
+            onChange={(e) => {
+              setMethodContents([
+                methodContents[0],
+                methodContents[1],
+                methodContents[2],
+                methodContents[3],
+                methodContents[4],
+                methodContents[5],
+                methodContents[6],
+                `${e.target.value}`,
+                methodContents[8],
+                methodContents[9],
+              ]);
+            }}
+            value={methodContents[7]}
+            label={"methodContents8"}
+          />
+        </Li>
+        <Li>
+          <InputText
+            onChange={(e) => {
+              setMethodContents([
+                methodContents[0],
+                methodContents[1],
+                methodContents[2],
+                methodContents[3],
+                methodContents[4],
+                methodContents[5],
+                methodContents[6],
+                methodContents[7],
+                `${e.target.value}`,
+                methodContents[9],
+              ]);
+            }}
+            value={methodContents[8]}
+            label={"methodContents9"}
+          />
+        </Li>
+        <Li>
+          <InputText
+            onChange={(e) => {
+              setMethodContents([
+                methodContents[0],
+                methodContents[1],
+                methodContents[2],
+                methodContents[3],
+                methodContents[4],
+                methodContents[5],
+                methodContents[6],
+                methodContents[7],
+                methodContents[8],
+                `${e.target.value}`,
+              ]);
+            }}
+            value={methodContents[9]}
+            label={"methodContents10"}
           />
         </Li>
       </ContentsContainer>
