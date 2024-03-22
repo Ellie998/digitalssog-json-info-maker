@@ -5,6 +5,9 @@
 - 기능 :
 - url : https://digitalssog-data-maker.netlify.app
 
+<img width="1287" alt="스크린샷 2024-03-22 오후 7 16 05" src="https://github.com/Ellie998/digitalssog-json-info-maker/assets/89681100/d9c98132-1689-41c5-b3a2-5703909afd83">
+
+
 ### 새로운 기능 설명 추가하기 버튼을 누르면
 
 > 1. functionName 선택 / 추가 가능하게
@@ -63,9 +66,15 @@
 
 사용 라이브러리
 "@emotion/styled": "^11.11.0",
+
 "@testing-library/jest-dom": "^5.17.0",
+
 "@testing-library/react": "^13.4.0",
+
 "@testing-library/user-event": "^13.5.0",
+
 "react": "^18.2.0",
+
 "react-dom": "^18.2.0",
+
 "react-scripts": "5.0.1",
