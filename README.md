@@ -71,12 +71,6 @@ form의 정보를 입력하고 [생성] 버튼을 누르면 아래 형태와 동
 ## 사용 라이브러리
 "@emotion/styled": "^11.11.0",
 
-"@testing-library/jest-dom": "^5.17.0",
-
-"@testing-library/react": "^13.4.0",
-
-"@testing-library/user-event": "^13.5.0",
-
 "react": "^18.2.0",
 
 "react-dom": "^18.2.0",
