@@ -1,19 +1,20 @@
-# json 파일 생성기
-=============
+# 디지털쏙 프로젝트 description JSON data 생성기
 
-- 목적 : 편리하게 디지털쏙 기능 설명을 위한 json 데이터를 생성하기 위해서 만들었다.
-- 기능 :
-- url : https://digitalssog-data-maker.netlify.app
 
+- 목적 : 디지털쏙 프로젝트의 description JSON data 생성 불편함을 개선하고자 했다.
+- 배포 : https://digitalssog-data-maker.netlify.app
+- 미리보기
+  
 <img width="1287" alt="스크린샷 2024-03-22 오후 7 16 05" src="https://github.com/Ellie998/digitalssog-json-info-maker/assets/89681100/d9c98132-1689-41c5-b3a2-5703909afd83">
 
-
+## 설명
 ### [new 기능] 버튼을 누르면
-
+아래의 정보를 입력할 수 있는 form이 보여진다.
 > 1. functionName 작성
 > 2. app 이름 선택
 > 3. charateristic 작성
 
+form의 정보를 입력하고 [생성] 버튼을 누르면 아래 형태와 동알한 JSON 데이터가 생성된다.
 ```
 "name": "",
 "app": [""],
@@ -21,7 +22,7 @@
 ```
 
 ### [new method] 버튼을 누르면
-
+아래의 정보를 입력할 수 있는 form이 보여진다.
 > 1. 카테고리 선택
 > 2. functionName 선택
 > 3. method app 선택
@@ -39,6 +40,9 @@
   >    > 3. methodTitle
   >    > 4. methodContent
 
+
+
+form의 정보를 입력하고 [생성] 버튼을 누르면 아래 형태와 동알한 JSON 데이터가 생성된다.
 ```
  {
     "category": "",
@@ -64,7 +68,7 @@
   }
 ```
 
-사용 라이브러리
+## 사용 라이브러리
 "@emotion/styled": "^11.11.0",
 
 "@testing-library/jest-dom": "^5.17.0",
