@@ -1,6 +1,6 @@
 # 디지털쏙 프로젝트 description JSON data 생성기
 
-- 기간 : 23.11.04
+- 기간 : 23.8.04
 - 목적 : 디지털쏙 프로젝트의 description JSON data 생성 불편함을 개선하고자 했다.
 - 배포 : https://digitalssog-data-maker.netlify.app
 - 미리보기
